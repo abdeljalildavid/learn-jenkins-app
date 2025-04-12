@@ -6,7 +6,7 @@ pipeline {
             agent{
                 docker {
                     image 'node:18-alpine'
-                    args '--privileged'
+                    args '--privileged --cap-add=SYS_ADMIN --security-opt seccomp=unconfined'
                     reuseNode true
                 }
             }
