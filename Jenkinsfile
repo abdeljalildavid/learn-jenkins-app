@@ -6,11 +6,12 @@ pipeline {
             agent{
                 docker {
                     image 'node:18-alpine'
-                    args '-t "tail -f /dev/null"'
+                    args '--entrypoint=tail'
                     reuseNode true
                 }
             }
             steps {
+                sh '-f /dev/null'
                 sh '''
                     ls -la
                     node -v
