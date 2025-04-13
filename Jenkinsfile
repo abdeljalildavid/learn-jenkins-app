@@ -6,7 +6,7 @@ pipeline {
             agent{
                 docker {
                     image 'node:18-alpine'
-                    args '-it "tail -f /dev/null"'
+                    args '-t "tail -f /dev/null"'
                     reuseNode true
                 }
             }
