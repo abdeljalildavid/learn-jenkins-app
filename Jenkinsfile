@@ -35,7 +35,7 @@ pipeline {
             steps {
                 
                 sh '''
-                    test -d ./build/index.html
+                    test -f ./build/index.html
                     '''
                 
             }
